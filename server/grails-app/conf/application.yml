@@ -75,6 +75,7 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
+    logSql: true
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password: yanjiankai
