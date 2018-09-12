@@ -1,10 +1,7 @@
 package autotestweb
 
-import ch.qos.logback.classic.Logger
-import grails.validation.ValidationException
 import groovy.util.logging.Slf4j
 
-import static org.springframework.http.HttpStatus.*
 @Slf4j
 class UserController {
 
@@ -73,7 +70,8 @@ class UserController {
 
     def authenticate = {
         def user = User.findByUsernameAndPassword(params.username, params.password)
-        Logger
+
+        log.info("获取到user对象${user}的session值为${session}")
         if(user){
             session.user = user
             flash.message = "Hello ${user.username}!"
