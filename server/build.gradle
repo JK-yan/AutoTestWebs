@@ -57,6 +57,10 @@ dependencies {
     testCompile "org.grails:grails-datastore-rest-client"
     testCompile "org.grails:grails-web-testing-support"
     runtime  group: 'mysql', name: 'mysql-connector-java', version: '8.0.12'
+    // https://mvnrepository.com/artifact/com.auth0/java-jwt
+// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.6.0'
+
 }
 
 bootRun {

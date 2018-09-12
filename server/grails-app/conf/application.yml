@@ -64,6 +64,15 @@ grails:
 
 ---
 grails:
+    plugin:
+        security:
+            stateless:
+                secretKey: mysupersecretkey
+        springsecurity:
+            active: false
+
+---
+grails:
     cors:
         enabled: true
 ---
