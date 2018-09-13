@@ -111,6 +111,9 @@ appender("INFO", RollingFileAppender) {
 logger("console", INFO, ['INFO'], false)
 
 //将指定级别的日志输出到日志文件中
+
+logger('org.springframework.security', INFO, ['STDOUT'], false)
+logger('grails.plugin.springsecurity', INFO, ['STDOUT'], false)
 root(ERROR, ['ERROR'])
 //root(INFO, ['INFO'])
 root(INFO, ['STDOUT', 'INFO'])
@@ -123,9 +126,3 @@ root(INFO, ['STDOUT', 'INFO'])
 
 
 
-
-logger("org.springframework.boot.autoconfigure.security", ERROR)
-logger("org.hibernate", ERROR)
-logger("org.hibernate.internal", OFF)
-logger("org.grails.web.errors.GrailsExceptionResolver", OFF)
-logger("error.ClValidationException", OFF)
